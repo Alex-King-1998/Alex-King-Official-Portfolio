@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alex King | Frontend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="fade-in">Hi, I'm <span>Alex King</span></h1>
+      <h2 class="fade-in delay-1">Frontend & Software Engineer</h2>
+      <a href="#projects" class="btn fade-in delay-2">View Projects</a>
+    </div>
+  </header>
+  <section id="about" class="about section hidden">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I'm a passionate Frontend & Software Engineer with a deep love for crafting elegant, high-performance web applications.
+        I specialize in JavaScript, React, and building responsive interfaces that users love.
+      </p>
+    </div>
+  </section>
+  
+  <section id="skills" class="skills section hidden">
+    <div class="container">
+      <h2>Skills</h2>
+  
+      <div class="skill">
+        <div class="skill-name">HTML</div>
+        <div class="skill-bar"><div class="skill-fill" style="width: 95%"></div></div>
+      </div>
+  
+      <div class="skill">
+        <div class="skill-name">CSS</div>
+        <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+      </div>
+  
+      <div class="skill">
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+      </div>
+  
+      <div class="skill">
+        <div class="skill-name">React</div>
+        <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+      </div>
+  
+      <div class="skill">
+        <div class="skill-name">Git</div>
+        <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="projects" class="projects section hidden">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <!-- Project 1 -->
+        <div class="project-card" tabindex="0" data-title="ChatFlow Innovations" data-desc="An AI chatbot business website with full Stripe integration and demo video, deployed via Google Cloud" data-link="https://github.com/Alex-King-1998/ChatFlow-Innovations">
+          <img src="images/chatbot.png" alt="Chatflow Innovations">
+
+          <div class="project-info">
+            <h3>ChatFlow Innovations</h3>
+            <p>Commercial B2B Chatbot Website, deployed on Google Cloud</p>
+          </div>
+        </div>
+  
+        <!-- Project 2 -->
+        <div class="project-card" tabindex="0" data-title="Flask Book API" data-desc="A RESTful API developed with Flask to manage a collection of books." data-link="https://github.com/Alex-King-1998/FlaskBookAPI">
+          <img src="images/bookapi.png" alt="React Todo App">
+          <div class="project-info">
+            <h3>Flask Book API</h3>
+            <p>A RESTful API developed with Flask to manage a collection of books.</p>
+          </div>
+        </div>
+  
+        <!-- Add more projects as needed -->
+      </div>
+    </div>
+  </section>
+  
+  <!-- Modal Popup -->
+  <div id="project-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <div class="modal-content">
+      <button id="modal-close" aria-label="Close modal">&times;</button>
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc"></p>
+      <a id="modal-link" href="#" target="_blank" rel="noopener" class="btn">View Project</a>
+    </div>
+  </div>
+
+  <section id="contact" class="contact section hidden">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>If you'd like to get in touch, feel free to send me a message!</p>
+      <form id="contact-form" action="https://formspree.io/f/xnnjvazk" method="POST" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required />
+  
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" placeholder="your.email@example.com" required />
+  
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+  
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+  
+  
+
+  <script src="script.js"></script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,289 @@
+/* Color Variables */
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+:root {
+    --bg: #0f0f0f;
+    --surface: #1a1a1a;
+    --text: #f4f4f4;
+    --muted: #c0c0c0;
+    --accent: #ff6b00;
+    --accent-hover: #ff8533;
+  }
+  
+  /* Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--surface), var(--bg));
+    padding: 2rem;
+  }
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  .hero-content h1 span {
+    color: var(--accent);
+  }
+  .hero-content h2 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    color: var(--muted);
+  }
+  .btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    background: var(--accent);
+    color: var(--bg);
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  .btn:hover {
+    transform: scale(1.05);
+    background-color: var(--accent-hover);
+  }
+  
+  /* Animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+  }
+  .fade-in.delay-1 {
+    animation-delay: 0.3s;
+  }
+  .fade-in.delay-2 {
+    animation-delay: 0.6s;
+  }
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Section Base */
+  .section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--surface);
+    border-radius: 12px;
+    margin: 2rem auto;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
+  p {
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  
+  /* Scroll Reveal Animation */
+  .hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Skills Section */
+.skill {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  .skill-name {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+  .skill-bar {
+    width: 100%;
+    background-color: #2a2a2a;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .skill-fill {
+    height: 100%;
+    background-color: var(--accent);
+    width: 0;
+    border-radius: 6px;
+    transition: width 1s ease-in-out;
+  }
+
+  /* Projects Section */
+.project-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: 2rem;
+  }
+  
+  .project-card {
+    background-color: var(--surface);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-card:hover,
+  .project-card:focus {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(255,107,0,0.5);
+  }
+  .project-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  .project-info {
+    padding: 1rem;
+    flex-grow: 1;
+  }
+  .project-info h3 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  .project-info p {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15,15,15,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: 9999;
+  }
+  .modal.hidden {
+    display: none;
+  }
+  .modal-content {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 8px 30px rgba(255,107,0,0.4);
+    position: relative;
+    text-align: center;
+  }
+  #modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  #modal-close:hover {
+    color: var(--accent);
+  }
+  #modal-link.btn {
+    margin-top: 1.5rem;
+  }
+
+  /* Contact Section */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact label {
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.contact input,
+.contact textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #2a2a2a;
+  color: var(--text);
+  font-size: 1rem;
+  resize: vertical;
+  transition: background-color 0.3s ease;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: var(--muted);
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: 2px solid var(--accent);
+  background-color: #3a3a3a;
+}
+
+.contact button.btn {
+  margin-top: 1.5rem;
+  align-self: center;
+  padding: 0.75rem 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--accent);
+  color: var(--bg);
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact button.btn:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.05);
+}
+
+  
